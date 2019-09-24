@@ -6,7 +6,7 @@
 
 - name: Check phpbuild directory
   stat:
-    path: "{{ phpbuild_destination}}"
+    path: "{{ phpbuild_destination }}"
   register: phpbuild_dest
 
 - name: Install phpbuild
