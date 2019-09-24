@@ -3,6 +3,13 @@ cloud3rsio.phpbuild
 
 Install php-build.
 
+Installation
+------------
+
+```bash
+$ ansible-galaxy install cloud3rsio.phpbuild
+```
+
 Requirements
 ------------
 
@@ -24,7 +31,7 @@ Dependencies
 Example Playbook
 ----------------
 
-```
+```yaml
 - hosts: all
   roles:
     - role: cloud3rsio.phpbuild
