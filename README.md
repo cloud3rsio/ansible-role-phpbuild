@@ -28,7 +28,7 @@ Dependencies
 ------------
 
 - `cloud3rsio.yumrepo_epel`
-- `cloud3rsio.yumrepo_remi` (only centos)
+- `cloud3rsio.yumrepo_remi`
 
 Example Playbook
 ----------------
