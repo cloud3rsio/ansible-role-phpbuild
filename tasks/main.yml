@@ -4,6 +4,26 @@
     name: "{{ phpbuild_packages | join(',') }}"
     state: present
 
+- name: Install phpbuild required packages libzip-devel
+  yum:
+    name: libzip-devel
+    state: present
+  when:
+    - ansible_distribution == "Amazon"
+
+- name: Install remi repository
+  import_role:
+    name: cloud3rsio.yumrepo_remi
+  when:
+    - ansible_distribution == "CentOS"
+
+- name: Install phpbuild required packages libzip-last-devel
+  yum:
+    name: libzip-last-devel
+    state: present
+  when:
+    - ansible_distribution == "CentOS"
+
 - name: Check phpbuild directory
   stat:
     path: "{{ phpbuild_destination }}"
