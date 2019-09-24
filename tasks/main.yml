@@ -1,0 +1,24 @@
+---
+- name: Install phpbuild required packages
+  yum:
+    name: "{{ phpbuild_packages | join(',') }}"
+    state: present
+
+- name: Check phpbuild directory
+  stat:
+    path: "{{ phpbuild_destination}}"
+  register: phpbuild_dest
+
+- name: Install phpbuild
+  git:
+    repo: https://github.com/php-build/php-build.git
+    dest: "{{ phpbuild_destination }}"
+  when: not phpbuild_dest.stat.exists
+
+- name: Setup profile
+  template:
+    src: phpbuild.sh.j2
+    dest: /etc/profile.d/phpbuild.sh
+    owner: root
+    group: root
+    mode: 0644
