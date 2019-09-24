@@ -22,6 +22,7 @@ Role Variables
 | ------------- | ------------- | ------------- |
 | `phpbuild_packages` | Reference to [defaults/main.yml](defaults/main.yml) | List |
 | `phpbuild_destination` | `/usr/local/php-build` | String |
+| `phpbuild_version` | `master` | String |
 
 Dependencies
 ------------

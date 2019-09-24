@@ -35,3 +35,4 @@ phpbuild_packages:
   - autoconf
   - git
 phpbuild_destination: /usr/local/php-build
+phpbuild_version: master

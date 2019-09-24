@@ -13,6 +13,7 @@
   git:
     repo: https://github.com/php-build/php-build.git
     dest: "{{ phpbuild_destination }}"
+    version: "{{ phpbuild_version }}"
   when: not phpbuild_dest.stat.exists
 
 - name: Setup profile
