@@ -34,5 +34,6 @@ phpbuild_packages:
   - gcc-c++
   - autoconf
   - git
+  - sqlite-devel
 phpbuild_destination: /usr/local/php-build
 phpbuild_version: master
